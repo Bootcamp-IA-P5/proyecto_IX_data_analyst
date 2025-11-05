@@ -32,15 +32,15 @@ dist/
 *.spec
 
 # 🗃️ Data
-data/raw/
-data/processed/
-data/interim/
+#data/raw/
+#data/processed/
+#data/interim/
 *.csv
 *.json
 *.xlsx
 *.parquet
 *.zip
-*.gz
+#*.gz
 
 # 📊 Reports / Outputs
 reports/

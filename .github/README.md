@@ -13,8 +13,25 @@ Comprehensive documentation for configuring the Kanban board, including:
 - Kanban board column structure
 - Implementation checklist
 
+### apply_labels.sh
+Bash script to automatically apply labels to issues and close duplicates using GitHub CLI.
+
+**Usage:**
+```bash
+# Authenticate with GitHub (one-time setup)
+gh auth login
+
+# Run the script
+chmod +x .github/apply_labels.sh
+./.github/apply_labels.sh
+```
+
+**Requirements:**
+- GitHub CLI (gh) installed
+- Authenticated with GitHub
+
 ### apply_labels.py
-Python script to automatically apply labels to issues and close duplicates.
+Python script alternative to automatically apply labels to issues and close duplicates.
 
 **Usage:**
 ```bash

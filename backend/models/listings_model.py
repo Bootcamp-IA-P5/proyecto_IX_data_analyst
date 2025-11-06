@@ -1,1 +1,0 @@
-# el modelo sqlalchemy para la tabla listings

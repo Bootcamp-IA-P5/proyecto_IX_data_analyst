@@ -1,1 +1,0 @@
-# Funciones auxiliares (logs, config, etc.)

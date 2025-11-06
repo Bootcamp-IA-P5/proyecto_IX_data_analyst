@@ -78,12 +78,12 @@ This document provides a visual overview of the current and proposed label assig
 
 | Label | Count | Issues |
 |-------|-------|--------|
-| `data` | 8 | #5, #19, #21, #22, #23, #25 |
-| `EDA` | 3 | #19, #21 |
+| `data` | 6 | #5, #19, #21, #22, #23, #25 |
+| `EDA` | 2 | #19, #21 |
 | `ML` | 5 | #6, #25, #26, #27, #28 |
 | `backend` | 4 | #7, #8, #9, #28 |
 | `powerbi` | 3 | #12, #13, #24 |
-| `documentation` | 3 | #14, #15, #16, #17 |
+| `documentation` | 4 | #14, #15, #16, #17 |
 | `docker` | 1 | #10 |
 | `deploy` | 1 | #11 |
 | `setup` | 1 | #18 |

@@ -4,6 +4,21 @@ This directory contains configuration files and scripts for managing the GitHub 
 
 ## Files
 
+### workflows/apply-labels.yml
+GitHub Actions workflow to automatically apply labels and close duplicates.
+
+**Usage:**
+1. Go to the Actions tab in GitHub repository
+2. Select "Apply Issue Labels" workflow
+3. Click "Run workflow" button
+4. Confirm by clicking the green "Run workflow"
+
+**Requirements:**
+- GitHub repository with Actions enabled
+- Workflow runs automatically with GitHub's token
+
+**This is the easiest and recommended method!**
+
 ### KANBAN_CONFIGURATION.md
 Comprehensive documentation for configuring the Kanban board, including:
 - Available labels and their purposes

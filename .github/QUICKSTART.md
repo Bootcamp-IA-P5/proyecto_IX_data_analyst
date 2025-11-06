@@ -2,7 +2,24 @@
 
 This guide provides the fastest way to apply labels to all unlabeled issues in the repository.
 
-## Option 1: GitHub CLI (Recommended - Fastest)
+## Option 1: GitHub Actions (Recommended - Easiest)
+
+**No installation required!** Just trigger the workflow:
+
+1. Go to https://github.com/Bootcamp-IA-P5/proyecto_IX_data_analyst/actions
+2. Click on "Apply Issue Labels" workflow
+3. Click "Run workflow" button
+4. Click the green "Run workflow" button in the dropdown
+5. Wait ~30 seconds for completion
+
+The workflow will automatically:
+- Apply labels to all 10 unlabeled issues
+- Close 2 duplicate issues
+- Display a summary
+
+**Time: ~30 seconds | Difficulty: Easiest**
+
+## Option 2: GitHub CLI (Fast)
 
 If you have GitHub CLI installed:
 
@@ -19,9 +36,9 @@ That's it! The script will:
 - Close 2 duplicate issues
 - Display a summary
 
-**Time: ~30 seconds**
+**Time: ~30 seconds | Difficulty: Easy**
 
-## Option 2: Python Script
+## Option 3: Python Script
 
 If you prefer Python:
 
@@ -36,9 +53,9 @@ export GITHUB_TOKEN="your_token_here"
 python3 .github/apply_labels.py
 ```
 
-**Time: ~1 minute**
+**Time: ~1 minute | Difficulty: Medium**
 
-## Option 3: Manual (via GitHub Web Interface)
+## Option 4: Manual (via GitHub Web Interface)
 
 If you prefer to do it manually, here are the exact steps:
 
@@ -71,9 +88,9 @@ If you prefer to do it manually, here are the exact steps:
      - Add comment: "Closing as duplicate of #4 (🔎 Exploratory Data Analysis). EDA has already been completed."
      - Click "Close issue"
 
-**Time: ~10 minutes**
+**Time: ~10 minutes | Difficulty: Manual**
 
-## Option 4: Using GitHub CLI Individually
+## Option 5: Using GitHub CLI Individually
 
 If you want to run commands one by one:
 

@@ -19,3 +19,6 @@ python-multipart # para subir archivos si se usa endpoint
 # --- Docker / Deployment ---
 python-dotenv    # manejo de variables de entorno
 
+# --- GitHub Management (optional) ---
+PyGithub         # para automatizar la gestión de issues y labels
+

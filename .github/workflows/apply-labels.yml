@@ -1,0 +1,45 @@
+name: Apply Issue Labels
+
+on:
+  workflow_dispatch:  # Allows manual trigger from Actions tab
+
+jobs:
+  apply-labels:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Apply labels to issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Apply labels to each issue
+          gh issue edit 17 --add-label "documentation" || echo "Issue 17 already labeled or not found"
+          gh issue edit 18 --add-label "setup" || echo "Issue 18 already labeled or not found"
+          gh issue edit 19 --add-label "data,EDA" || echo "Issue 19 already labeled or not found"
+          gh issue edit 23 --add-label "data" || echo "Issue 23 already labeled or not found"
+          gh issue edit 24 --add-label "powerbi" || echo "Issue 24 already labeled or not found"
+          gh issue edit 25 --add-label "ML,data" || echo "Issue 25 already labeled or not found"
+          gh issue edit 26 --add-label "ML" || echo "Issue 26 already labeled or not found"
+          gh issue edit 27 --add-label "ML" || echo "Issue 27 already labeled or not found"
+          gh issue edit 28 --add-label "backend,ML" || echo "Issue 28 already labeled or not found"
+          gh issue edit 29 --add-label "docker" || echo "Issue 29 already labeled or not found"
+          
+      - name: Close duplicate issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Close duplicate issues with comments
+          gh issue close 29 --comment "Closing as duplicate of #10 (🐳 Dockerize FastAPI backend). Both tasks address Docker containerization." || echo "Issue 29 already closed or not found"
+          gh issue close 20 --comment "Closing as duplicate of #4 (🔎 Exploratory Data Analysis). EDA has already been completed." || echo "Issue 20 already closed or not found"
+          
+      - name: Summary
+        run: |
+          echo "✅ Labels applied to issues"
+          echo "✅ Duplicate issues closed"
+          echo ""
+          echo "Check the issues at: https://github.com/${{ github.repository }}/issues"

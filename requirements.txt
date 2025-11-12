@@ -1,0 +1,24 @@
+# --- Core Python & Data Analysis ---
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+
+# --- Machine Learning (optional advanced level) ---
+scikit-learn
+
+# --- FastAPI Backend ---
+fastapi
+uvicorn
+
+# --- Data Loading / Integration ---
+openpyxl         # para leer archivos Excel
+python-multipart # para subir archivos si se usa endpoint
+
+# --- Docker / Deployment ---
+python-dotenv    # manejo de variables de entorno
+
+# --- GitHub Management (optional) ---
+PyGithub         # para automatizar la gestión de issues y labels
+

@@ -1,0 +1,6 @@
+aqui iran: 
+
+# Exploración inicial de datos
+# Limpieza y preparación
+# Modelos predictivos o de clustering
+ # Evaluación de modelos / resultados

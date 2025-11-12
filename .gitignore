@@ -1,0 +1,65 @@
+# 🧠 Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.pickle
+*.pyproj
+*.ipynb_checkpoints/
+.env
+.venv/
+venv/
+env/
+ENV/
+pip-wheel-metadata/
+*.egg-info/
+*.egg
+*.log
+
+# 🧪 Jupyter
+.ipynb_checkpoints
+notebooks/.ipynb_checkpoints/
+
+# 🧰 VSCode / PyCharm
+.vscode/
+.idea/
+*.iml
+
+# 📦 Build / Dist
+build/
+dist/
+*.spec
+
+# 🗃️ Data
+#data/raw/
+#data/processed/
+#data/interim/
+*.csv
+*.json
+*.xlsx
+*.parquet
+*.zip
+#*.gz
+
+# 📊 Reports / Outputs
+reports/
+reports/figures/
+*.pdf
+*.html
+*.png
+*.svg
+
+# 🐳 Docker / Environment
+docker/.env
+.env.local
+docker-compose.override.yml
+
+# 🧱 OS files
+.DS_Store
+Thumbs.db
+
+# 🔐 Secrets
+*.pem
+*.key
+*.crt

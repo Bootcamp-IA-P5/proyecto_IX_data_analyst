@@ -1,0 +1,1 @@
+# Cómo se conecta Power BI al backend/API y en esta carpeta irá todo lo del powerBI que tenemos que investigar

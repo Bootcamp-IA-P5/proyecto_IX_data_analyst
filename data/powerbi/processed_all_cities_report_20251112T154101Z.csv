@@ -1,0 +1,7 @@
+file,city,rows
+processed_london.csv,london,85050
+processed_madrid.csv,madrid,19610
+processed_milan.csv,milan,18322
+processed_ny.csv,ny,48884
+processed_sydney.csv,sydney,36653
+processed_tokyo.csv,tokyo,11462

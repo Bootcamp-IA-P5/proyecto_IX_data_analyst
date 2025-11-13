@@ -1,0 +1,7 @@
+file,city,rows
+agg_neighbourhood_london.csv,london,33
+agg_neighbourhood_madrid.csv,madrid,128
+agg_neighbourhood_milan.csv,milan,87
+agg_neighbourhood_ny.csv,ny,221
+agg_neighbourhood_sydney.csv,sydney,38
+agg_neighbourhood_tokyo.csv,tokyo,56

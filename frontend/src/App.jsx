@@ -1,47 +1,47 @@
-import { useState } from 'react';
-import Sidebar from './components/Sidebar';
+import { useState } from "react";
+import Sidebar from "./components/Sidebar";
+import Overview from "./components/Overview";
+import PriceAnalysis from "./components/PriceAnalysis";
+import Availability from "./components/Availability";
+import HostInsights from "./components/HostInsights";
 
 function App() {
-  const [view, setView] = useState('overview');
+  const [view, setView] = useState("overview");
+  const [theme, setTheme] = useState("dark"); // "dark" | "light"
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  };
+
+  const renderView = () => {
+    const commonProps = { theme };
+    switch (view) {
+      case "overview":
+        return <Overview {...commonProps} />;
+      case "price":
+        return <PriceAnalysis {...commonProps} />;
+      case "availability":
+        return <Availability {...commonProps} />;
+      case "host_insights":
+        return <HostInsights {...commonProps} />;
+      default:
+        return <Overview {...commonProps} />;
+    }
+  };
+
+  const isDark = theme === "dark";
 
   return (
-    <div className="flex bg-gray-900 text-white min-h-screen">
-      <Sidebar setView={setView} />
+    <div
+      className={
+        "flex min-h-screen font-sans " +
+        (isDark ? "bg-slate-950 text-white" : "bg-slate-50 text-slate-900")
+      }
+    >
+      <Sidebar view={view} setView={setView} theme={theme} toggleTheme={toggleTheme} />
 
-      <main className="flex-grow p-8">
-        {/* Vista para 'overview' */}
-        {view === 'overview' && (
-          <div>
-            <h1 className="text-4xl font-bold">Overview</h1>
-            <p className="mt-4 text-gray-400">High-level summary of global data.</p>
-          </div>
-        )}
-
-        {/* Vista para 'price' */}
-        {view === 'price' && (
-          <div>
-            <h1 className="text-4xl font-bold">Price Analysis</h1>
-            <p className="mt-4 text-gray-400">Detailed price metrics and trends.</p>
-          </div>
-        )}
-        
-        {/* --- TUS NUEVAS VISTAS VAN AQUÍ --- */}
-
-        {/* Vista para 'availability' */}
-        {view === 'availability' && (
-          <div>
-            <h1 className="text-4xl font-bold">Availability Analysis</h1>
-            <p className="mt-4 text-gray-400">Analysis of booking patterns and availability rates.</p>
-          </div>
-        )}
-
-        {/* Vista para 'host_insights' */}
-        {view === 'host_insights' && (
-          <div>
-            <h1 className="text-4xl font-bold">Host Insights</h1>
-            <p className="mt-4 text-gray-400">Insights about hosts, their properties, and performance.</p>
-          </div>
-        )}
+      <main className="flex-grow p-8 overflow-auto">
+        {renderView()}
       </main>
     </div>
   );
